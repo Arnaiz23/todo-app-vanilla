@@ -1,0 +1,26 @@
+{
+    "name": "arnaiz/crud-vanilla",
+    "description": "Basic CRUD application with php vanilla for learning",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Arnaiz\\CrudVanilla\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arnaiz23",
+            "email": "aaf110501@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.10"
+    },
+    "require-dev": {
+        "lkrms/pretty-php": "^0.4.43"
+    },
+  "scripts": {
+    "prettier": "vendor/bin/pretty-php src/"
+  }
+}

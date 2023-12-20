@@ -1,0 +1,65 @@
+{
+    "name": "lkrms/util",
+    "type": "library",
+    "license": "MIT",
+    "description": "A lightweight PHP toolkit for expressive backend/CLI apps",
+    "require": {
+        "php": ">=7.4",
+        "composer-runtime-api": "^2.2",
+        "lkrms/dice": "^4.1.6",
+        "psr/container": "^2",
+        "psr/log": "^1"
+    },
+    "suggest": {
+        "adodb/adodb-php": "Required for access to databases",
+        "league/oauth2-client": "Required for integration with OAuth 2.0 service providers",
+        "firebase/php-jwt": "Required for validation of OAuth 2.0 access tokens",
+        "analog/analog": "Allows Analog handlers to be used as console message targets",
+        "clue/phar-composer": "Simplifies creation of phar archives"
+    },
+    "require-dev": {
+        "adodb/adodb-php": "^5.22",
+        "analog/analog": "^1",
+        "clue/phar-composer": "^1",
+        "firebase/php-jwt": "^6",
+        "league/oauth2-client": "^2",
+        "phpstan/extension-installer": "^1",
+        "phpstan/phpstan": "^1",
+        "phpstan/phpstan-deprecation-rules": "^1",
+        "phpunit/phpunit": "^9",
+        "sebastian/diff": "^4 || ^5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lkrms\\": "src/"
+        },
+        "classmap": [
+            "stubs/"
+        ],
+        "files": [
+            "bootstrap.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lkrms\\LkUtil\\": "lk-util/",
+            "Lkrms\\Tests\\": [
+                "tests/unit/",
+                "tests/fixtures/"
+            ]
+        },
+        "files": [
+            "tests/fixtures/Utility/Debugging/GetCallerFile1.php",
+            "tests/fixtures/Utility/Debugging/GetCallerFile2.php"
+        ]
+    },
+    "bin": [
+        "bin/lk-util"
+    ],
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
